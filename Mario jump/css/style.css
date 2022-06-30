@@ -33,6 +33,13 @@
     width: 150px;
 }
 
+.gameover {
+    z-index: -1;
+    position: absolute;
+    width: 1115px;
+    height: 470px;
+}
+
 .jump {
      animation: jump 500ms ease-out;
 }
