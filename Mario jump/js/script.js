@@ -19,8 +19,7 @@ const pause = () => {
 
 const control = (key) => {
   // restart game
-  if (key.key === "s") {
-  }
+
   if (key.key === "r") {
     play();
     const loop = setInterval(() => {
@@ -37,7 +36,6 @@ const control = (key) => {
         pipe.style.animation = "none";
         pipe.style.left = `${pipePosition}px`;
 
-        //mario.style.animation = "none";
         mario.style.bottom = `${marioPosition}px`;
 
         mario.src = "./images/game-over.png";
@@ -65,18 +63,6 @@ const control = (key) => {
       mario.classList.remove("jump");
     }, 500);
   }
-};
-
-const jump = (x) => {
-  if (x.key !== "w" || isJumping) return;
-
-  isJumping = true;
-  mario.classList.add("jump");
-
-  setTimeout(() => {
-    isJumping = false;
-    mario.classList.remove("jump");
-  }, 500);
 };
 
 document.addEventListener("keydown", control);
